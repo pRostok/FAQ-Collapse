@@ -27,6 +27,31 @@ h1 {
     transition: 0.5s ease;
 }
 
+.faq.active {
+    background-color: white;
+}
+
+.faq.active::after,
+.faq.active::before {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: red;
+    font-size: 80px;
+    position: absolute;
+    opacity: 0.3;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before {
+    color: green;
+    opacity: 0.3;
+    top: -10px;
+    left: -15px;
+    transform: rotateY(180deg);
+}
+
 .title {
     margin: 0 35px 0 0;
 }
@@ -41,4 +66,38 @@ p {
 
 .faq.active p {
     display: block;
+}
+
+.btn {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+.btn .fa-xmark {
+    display: none;
+}
+
+.faq.active .btn .fa-xmark {
+    display: block;
+}
+
+.faq.active .btn .fa-chevron-down {
+    display: none;
+}
+
+.faq.active .btn {
+    background-color: lightblue;
+    color: white;
 }
