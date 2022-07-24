@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.title {
+    margin: 0 35px 0 0;
+}
+
+p {
+    margin: 30px 0 0;
+    display: none;
+    font-weight: lighter;
+    font-size: larger;
+
+}
+
+.faq.active p {
+    display: block;
+}
